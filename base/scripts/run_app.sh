@@ -4,7 +4,7 @@ if [ -d /bundle ]; then
   cd /bundle
   tar xzf *.tar.gz
   cd /bundle/bundle/programs/server/
-  npm install --unsafe-perm --loglevel warn
+  npm install --unsafe-perm &>/dev/null
   cd /bundle/bundle/
 else
   echo "=> You don't have an meteor app to run in this image."
