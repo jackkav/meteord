@@ -4,7 +4,7 @@ if [ -d /bundle ]; then
   cd /bundle
   tar xzf *.tar.gz
   cd /bundle/bundle/programs/server/
-  npm install --unsafe-perm
+  npm install --unsafe-perm >> /var/log/meteor/npm_output.log
   cd /bundle/bundle/
 elif [[ $BUNDLE_URL ]]; then
   cd /tmp
